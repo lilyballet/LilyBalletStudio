@@ -212,4 +212,32 @@ main>#home{display:block!important}
 <div class="chapter"><h2>ご予約の変更・キャンセル</h2><p>3日前まで：無料</p><p>2日前：スタジオキャンセル料の実費</p><p>前日：レッスン料金の50%（回数券は1回分を消化）</p><p>当日・無断欠席：レッスン料金の100%（回数券は1回分を消化）</p><p>※前日・当日のキャンセル料には、スタジオ代を含みます。</p><p>※スタジオによっては、3日前までのキャンセルでも実費がかかる場合があります。該当する場合は、候補日時のご案内の際にお伝えします。</p><p>※ご予約前に、ご都合のよい日をよくご確認ください。レッスン日が近いご予約は、確定した時点からキャンセル料の対象となります。</p><p>※当日のキャンセルは、病気・怪我・交通機関の遅れなど、理由を問わず上記のキャンセル料がかかります。ただし、天災や公共交通機関の運休などの場合は、振替で対応します。</p><p>※キャンセル料のお支払いがない場合は、今後のご予約をお断りすることがあります。</p><p>お客様のご都合による返金は、所定のキャンセル料を差し引き、銀行振込で行います。返金時の振込手数料は原則お客様負担となります。</p><p>教室側の都合、またはレンタルスタジオの都合によりレッスンを実施できなくなった場合は、別日への振替、または未実施分の全額返金にて対応いたします。</p></div>
 </section>
 </main><footer><div>Lily Ballet Studio</div><div>© Lily Ballet Studio</div><div style="margin-top:12px"><a data-page="about" href="#about">ABOUT</a><a data-page="lesson" href="#lesson">LESSON</a><a data-page="teacher" href="#teacher">TEACHER</a><a data-page="reservation" href="#reservation">RESERVATION</a></div></footer>
-</div></body></html>
+</div>
+<script>
+(function(){
+  const form = document.querySelector('form[name="lily-reservation"]');
+  if (!form) return;
+  form.addEventListener('submit', async function(e){
+    e.preventDefault();
+    const button = form.querySelector('button[type="submit"]');
+    const originalText = button ? button.textContent : '';
+    if (button) { button.disabled = true; button.textContent = '送信中…'; }
+    try {
+      const response = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      });
+      if (response.ok) {
+        window.location.href = './ありがとう.html';
+        return;
+      }
+      throw new Error('送信に失敗しました');
+    } catch (error) {
+      alert('送信できませんでした。通信状況をご確認のうえ、もう一度お試しください。');
+      if (button) { button.disabled = false; button.textContent = originalText; }
+    }
+  });
+})();
+</script>
+</body></html>
