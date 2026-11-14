@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>レッスンのお申し込み｜Lily Ballet Studio</title>
+<style>
+:root{--rose:#b87886;--rose2:#d9adb7;--ink:#765e64;--muted:#987980;--blush:#f7e9eb;--cream:#fffaf7;--line:#ebd3d7}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#f5eeec;color:var(--ink);font-family:'Yu Mincho','Hiragino Mincho ProN','Noto Serif JP',serif;font-size:15px;line-height:1.95}
+.page-shell{max-width:700px;min-height:100vh;margin:auto;background:var(--cream);box-shadow:0 0 40px #ad798024}
+.site-header{min-height:62px;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:8px 18px;position:sticky;top:0;z-index:10;background:rgba(255,250,247,.98);border-bottom:1px solid #f3e8e8}
+.brand{color:var(--rose);text-decoration:none;line-height:1.15}
+.brand .lily{display:block;font:italic 28px Georgia,serif}
+.brand .studio{display:block;font:11px Georgia,serif;letter-spacing:.15em}
+.home-link{border:1px solid var(--rose);border-radius:22px;padding:7px 13px;color:var(--rose);text-decoration:none;font-size:12px;white-space:nowrap}
+#reservation{display:block!important;padding:30px 26px 58px}
+.heading{text-align:center;margin:10px auto 32px}
+.heading .en{font-family:Georgia,'Times New Roman',serif;font-size:34px;color:var(--rose);letter-spacing:.2em;margin:0;font-weight:400}
+.heading .ja{font-size:14px;color:var(--muted);margin-top:6px}
+.bow{display:flex;justify-content:center;align-items:center;gap:16px;color:var(--rose);margin:11px 0 16px}
+.bow:before,.bow:after{content:'';height:1px;background:var(--line);flex:1;max-width:150px}
+.bow span{font-size:27px;line-height:1}
+.chapter{padding:8px 0 20px;margin-bottom:16px}
+.chapter h2{font-size:21px;font-weight:500;line-height:1.7;letter-spacing:.04em;color:#77585e}
+.chapter p{margin:12px 0;font-size:15px;line-height:2.05}
+.soft{background:var(--blush);border-radius:18px;padding:21px 20px;margin:24px 0}
+.note{font-size:13px;color:var(--muted);line-height:1.9}
+.form-grid{display:grid;gap:17px}
+.form-grid label{display:block;font-size:14px;color:var(--ink);font-weight:500}
+.form-grid input:not([type=checkbox]):not([type=radio]),.form-grid textarea,.form-grid select{width:100%;font:inherit;font-size:14px;padding:10px 12px;border:1px solid var(--line);border-radius:8px;background:#fff;min-height:42px}
+.form-grid textarea{min-height:88px}
+.choices{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px;margin-top:7px}
+.choices label{font-weight:400;display:flex;align-items:center;gap:6px;font-size:13px}
+.choices input{accent-color:var(--rose)}
+.experience-years{display:grid;gap:6px;padding:14px 15px;background:#f9f0f0;border:1px solid var(--line);border-radius:12px}
+.experience-years label{margin-top:4px}
+.experience-years p{margin:0}
+.btn{border:1.5px solid var(--rose);border-radius:32px;display:flex;align-items:center;justify-content:center;text-decoration:none;padding:13px 20px;font-size:15px;letter-spacing:.08em;color:var(--rose);background:transparent;cursor:pointer;min-height:54px;font-family:inherit}
+.btn.primary{background:var(--rose);color:#fff}
+.btn:disabled{opacity:.55}
+.sepa{height:1px;background:var(--line);margin:28px 0}
+.steps{counter-reset:step;list-style:none;padding:0}
+.steps li{position:relative;margin:18px 0;padding:0 0 0 46px}
+.steps li:before{counter-increment:step;content:counter(step,decimal-leading-zero);position:absolute;left:0;color:var(--rose);font-family:Georgia,serif;font-size:19px}
+.steps strong{display:block;font-weight:500;font-size:16px}
+.footer{border-top:1px solid var(--line);text-align:center;padding:24px 14px 30px;color:var(--muted);font-size:12px}
+.footer a{color:var(--rose);text-decoration:none}
+@media(min-width:520px){#reservation{padding:38px 63px 70px}}
+@media(max-width:390px){#reservation{padding:25px 20px 48px}.choices{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+<div class="page-shell">
+<header class="site-header">
+  <a class="brand" href="./index.html"><span class="lily">Lily</span><span class="studio">BALLET STUDIO</span></a>
+  <a class="home-link" href="./index.html">トップへ戻る</a>
+</header>
+<main>
+<section class="page-body" id="reservation"><div class="heading"><h1 class="en">RESERVATION</h1><div class="ja">レッスンのお申し込み</div><div class="bow"><span>୨୧</span></div></div><div class="chapter"><h2>はじめの一歩を、あなたのペースで。</h2><p>バレエが初めての方も、基礎をもう一度見直したい方も。</p><p>Lilyでは、一人ひとりの経験や目標に合わせて、丁寧にレッスンを進めていきます。</p><p>クラス選びに迷っている方も、お気軽にご相談ください。</p></div>
+<div class="soft"><strong>レッスンのお申し込み</strong><div class="note">フォームを送信した時点では予約は確定しません。候補日時・場所について折り返しご案内します。</div></div>
+<form action="https://formspree.io/f/maeowogd" aria-label="レッスン予約のお申し込み" class="form-grid" method="POST" name="lily-reservation">
+<div><label for="nm">お名前（必須）</label><input autocomplete="name" id="nm" name="customer_name" placeholder="お名前" required="" type="text"/></div>
+<div><label for="em">メールアドレス（必須）</label><input autocomplete="email" id="em" name="email" placeholder="メールアドレス" required="" type="email"/></div>
+<div><label>バレエ経験（必須）</label><div class="choices"><label><input name="exp" required="" type="radio" value="未経験"/>未経験</label><label><input name="exp" type="radio" value="経験あり"/>経験あり</label><label><input name="exp" type="radio" value="ブランクあり"/>ブランクあり</label></div></div><div class="experience-years"><label for="years-ballet">バレエ経験年数（経験のある方）</label><input id="years-ballet" inputmode="numeric" name="experience_years" placeholder="例：3年（おおよそでOK）" type="text"/><label for="years-blank">ブランク年数（再開の方）</label><input id="years-blank" inputmode="numeric" name="break_years" placeholder="例：5年（おおよそでOK）" type="text"/><p class="note">未経験の方はどちらも記入不要です。</p></div>
+<div><label>ご希望のクラス</label><div class="choices"><label><input name="lesson" type="radio" value="土台づくりクラス"/>土台づくりクラス</label><label><input name="lesson" type="radio" value="基礎クラスⅠ"/>基礎クラスⅠ</label><label><input name="lesson" type="radio" value="相談して決めたい"/>相談して決めたい</label></div></div>
+<div><label for="plan">ご希望のプラン</label><select id="plan" name="plan"><option>初回体験　4,900円</option><option>単発　7,000円</option><option>3回券　20,000円</option><option>5回券　31,000円</option></select></div>
+<div><label for="when">ご希望の時期（必須）</label><select id="when" name="preferred_period"><option>できるだけ早く</option><option>今月中</option><option>来月中</option><option>〇月頃</option><option>特に決まっていない</option></select></div>
+<div><label>ご希望の曜日（必須・複数選択可）</label><div class="choices"><label><input name="preferred_weekdays[]" type="checkbox" value="月曜日"/>月曜日</label><label><input name="preferred_weekdays[]" type="checkbox" value="火曜日"/>火曜日</label><label><input name="preferred_weekdays[]" type="checkbox" value="水曜日"/>水曜日</label><label><input name="preferred_weekdays[]" type="checkbox" value="木曜日"/>木曜日</label><label><input name="preferred_weekdays[]" type="checkbox" value="金曜日"/>金曜日</label><label><input name="preferred_weekdays[]" type="checkbox" value="土曜日"/>土曜日</label><label><input name="preferred_weekdays[]" type="checkbox" value="日曜日"/>日曜日</label><label><input name="preferred_weekdays[]" type="checkbox" value="曜日は相談したい"/>曜日は相談したい</label></div></div>
+<div><label>ご希望の時間帯（必須・複数選択可）</label><div class="choices"><label><input name="preferred_times[]" type="checkbox" value="午前"/>午前</label><label><input name="preferred_times[]" type="checkbox" value="12:00〜15:00頃"/>12:00〜15:00頃</label><label><input name="preferred_times[]" type="checkbox" value="15:00〜18:00頃"/>15:00〜18:00頃</label><label><input name="preferred_times[]" type="checkbox" value="18:00以降"/>18:00以降</label><label><input name="preferred_times[]" type="checkbox" value="時間帯は相談したい"/>時間帯は相談したい</label></div></div>
+<div><label for="not">避けたい曜日・時間帯（任意）</label><textarea id="not" name="unavailable_times" placeholder="任意"></textarea></div>
+<div><label for="msg">ご質問・ご要望（任意）</label><textarea id="msg" name="questions" placeholder="任意"></textarea></div>
+<div><label><input name="terms_agreement" required="" type="checkbox" value="同意"/> 料金・有効期限・キャンセル規定を確認し、同意する</label></div>
+<button class="btn primary" type="submit">レッスンを申し込む</button></form>
+<div class="sepa"></div><div class="chapter"><h2>ご予約の流れ</h2><ol class="steps"><li><strong>フォーム送信</strong>ご希望の時期・曜日・時間帯をお知らせください。</li><li><strong>候補日時・場所</strong>スタジオの空きを確認してご案内します。</li><li><strong>お支払い</strong>内容をご確認の上、ご案内する指定口座へ事前振込をお願いします。</li><li><strong>予約確定</strong>ご入金確認後、予約確定のご連絡をいたします。</li></ol><p class="note">※フォーム送信時点では予約は確定しておりません。スタジオの空き状況によっては候補日時を再調整する場合がございます。</p></div>
+<div class="chapter"><h2>お支払いについて</h2><p>お支払いは事前の銀行振込にてお願いしております。</p><p>候補日時とスタジオの空き状況を確認した後、レッスン日時・場所・振込先をご案内いたします。</p><p>ご案内内容をご確認いただき、ご入金確認後に予約確定となります。</p><p>※振込手数料はお客様負担となります。</p><p>※スタジオの空き状況は流動的なため、ご入金後にご希望の日時を確保できない場合がございます。その際は、改めてご相談のうえ、別の日時をご案内いたします。日程の調整が難しい場合は、当該レッスン代を全額返金いたします（返金手数料は教室負担）。</p></div>
+<div class="chapter"><h2>回数券について</h2><p>3回券：購入日（入金確認日）から2か月</p><p>5回券：購入日（入金確認日）から3か月</p><p>回数券をご購入の場合も、各レッスンはレンタルスタジオの空き状況を確認しながらご予約いただきます。</p></div>
+<div class="chapter"><h2>ご予約の変更・キャンセル</h2><p>3日前まで：無料</p><p>2日前：スタジオキャンセル料の実費</p><p>前日：レッスン料金の50%（回数券は1回分を消化）</p><p>当日・無断欠席：レッスン料金の100%（回数券は1回分を消化）</p><p>※前日・当日のキャンセル料には、スタジオ代を含みます。</p><p>※スタジオによっては、3日前までのキャンセルでも実費がかかる場合があります。該当する場合は、候補日時のご案内の際にお伝えします。</p><p>※ご予約前に、ご都合のよい日をよくご確認ください。レッスン日が近いご予約は、確定した時点からキャンセル料の対象となります。</p><p>※当日のキャンセルは、病気・怪我・交通機関の遅れなど、理由を問わず上記のキャンセル料がかかります。ただし、天災や公共交通機関の運休などの場合は、振替で対応します。</p><p>※キャンセル料のお支払いがない場合は、今後のご予約をお断りすることがあります。</p><p>お客様のご都合による返金は、所定のキャンセル料を差し引き、銀行振込で行います。返金時の振込手数料は原則お客様負担となります。</p><p>教室側の都合、またはレンタルスタジオの都合によりレッスンを実施できなくなった場合は、別日への振替、または未実施分の全額返金にて対応いたします。</p></div>
+</section>
+</main>
+<footer class="footer"><div>Lily Ballet Studio</div><div>© Lily Ballet Studio</div></footer>
+</div>
+<script>
+(function(){
+  const form = document.querySelector('form[name="lily-reservation"]');
+  if (!form) return;
+  form.addEventListener('submit', async function(e){
+    e.preventDefault();
+    const button = form.querySelector('button[type="submit"]');
+    const originalText = button ? button.textContent : '';
+    if (button) { button.disabled = true; button.textContent = '送信中…'; }
+    try {
+      const response = await fetch(form.action, {method:'POST',body:new FormData(form),headers:{'Accept':'application/json'}});
+      if (response.ok) { window.location.href = './thanks.html'; return; }
+      throw new Error('送信に失敗しました');
+    } catch (error) {
+      alert('送信できませんでした。通信状況をご確認のうえ、もう一度お試しください。');
+      if (button) { button.disabled = false; button.textContent = originalText; }
+    }
+  });
+})();
+</script>
+</body>
+</html>
